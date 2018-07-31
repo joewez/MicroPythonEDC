@@ -1,0 +1,42 @@
+div.code
+{
+    font-family:Courier; 
+    margin-left: 45px; 
+    border-style: solid; 
+    border-width:1px; 
+    padding: 10px;
+}
+p.subhead
+{
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+div.python-code
+{
+    background-color: black;
+    color: mediumseagreen;
+    font-family:Courier; 
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+p.highlight
+{
+    font-style: italic;
+    margin-left: 45px;
+    color: red; 
+}
+p.footer
+{
+    text-align: center;
+}
+span.code
+{
+    font-family:Courier; 
+}
+li.instruct
+{
+    margin-bottom: 10px;
+}

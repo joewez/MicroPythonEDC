@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pocket Cloud - General Usage</title>
+        <link href="styles/min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+		<script src="scripts/zepto.min.js"></script>
+    </head>
+    <body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="index.html">Personal Pocket Cloud</a>
+				<a href="getting.html">Getting Started</a>
+				<a href="replintro.html">REPL</a>
+                <a href="usage.html">General Usage</a>
+				<a href="applications.html">Shield Applications</a>
+				<a href="reference.html">Reference</a>
+                <a href="resources.html">Resources</a>
+			</div>
+		</nav>
+		<button class="btn-close btn btn-sm">×</button>
+		<div class="container">
+			<h2>General Usage</h2>
+			<p>
+			Here are some basic commands to demonstrate how to operate and configure the device.<br /><br />
+			</p>
+			<h3>Changing the Main Program</h3>
+			<hr />
+			<p>
+			To edit the <b>main.py</b> file simply enter:	
+			</p>
+			<div class="python-code">
+					>>> <b>import editmain</b>
+			</div>
+			<p>
+			This will open a full-screen editor with the current <b>main.py</b> file loaded.  Here are some quick keys you may
+			need...	
+			<ul>
+				<li>Ctrl-S - Save File</li>
+				<li>Ctrl-Q - Quit Editor</li>
+				<li>Ctrl-E - Redraw Screen</li>
+				<li>Ctrl-Z - Undo</li>
+			</ul>
+			To learn about all of the editing commands available, please see this <a href="editkeys.html">page</a>.
+			</p>
+			<br />
+			<h3>File Commands</h3>
+			<hr />
+			<p>
+			The Personal Pocket Cloud has a small amount of flash memory that can be used to hold MicroPython scripts and other data.
+			</p>
+			<p>
+			All the following commands require that you import the <b>util</b> module.	
+			</p>
+			<div class="python-code">
+					>>> <b>import util as u</b><br />
+			</div>
+			<br />
+			<p class="subhead">
+			View The Files In the Root Directory
+			</p>
+			<div class="python-code">
+				>>> <b>u.ls()</b>
+			</div>
+			<p class="subhead">
+			View The Files In A Specific Directory
+			</p>
+			<div class="python-code">
+				>>> <b>u.ls('/wwwroot')</b>
+			</div>
+			<p class="subhead">
+			View The Contents Of A File
+			</p>
+			<div class="python-code">
+				>>> <b>u.cat('main.py')</b>
+			</div>
+			<p class="subhead">
+			Edit A File
+			</p>
+			<div class="python-code">
+				>>> <b>u.edit('/wwwroot/index.html')</b>
+			</div>
+			<p class="subhead">
+			Get Free Space
+			</p>
+			<div class="python-code">
+				>>> <b>u.df()</b>
+			</div>
+			<br />
+			<br />
+			<h3>WiFi Commands</h3>
+			<hr />
+			<p class="highlight">
+			Note: The ESP8266 WiFi chip used by the Pocket Cloud will automatically retain it's last WiFi settings even after it
+			is reset or even re-powered.  You have to use the following commands to change the settings directly.
+			</p>
+			<p>
+			All the following commands require that you import the <b>wifi</b> module.	
+			</p>
+			<div class="python-code">
+					>>> <b>import wifi</b><br />
+				</div>
+			<p class="subhead">
+			Connect to a WiFi Network
+			</p>
+			<p>
+			At the MicroPython command prompt enter the command:
+			</p>
+			<div class="python-code">
+				>>> <b>wifi.connect('ssid', 'password')</b>
+			</div>
+			<p>
+			Using the appropriate credentials for your situation.  <i>Note that case <u>does matter</u> for both parameters.</i> For example:
+			</p>
+			<div class="python-code">
+				>>> <b>wifi.connect('HOME_WIFI', 'ABDCEFG')</b>
+			</div>
+			<p class="subhead">
+			Disconnect from a WiFi Network
+			</p>
+			<p>
+			At the MicroPython command prompt enter the commands:
+			</p>
+			<div class="python-code">
+				>>> <b>wifi.disconnect()</b><br />
+			</div>
+			<p style="margin-bottom:40px;">
+			</p>
+			<p class="subhead">
+			Create a WiFi Access Point
+			</p>
+			<p>
+			At the MicroPython command prompt enter the commands:
+			</p>
+			<div class="python-code">
+				>>> <b>wifi.access_point('ssid', &lt;'password'&gt;)</b>
+			</div>
+			<p style="margin-bottom:40px;">
+			Using the credentials that you wish.  <i>Note that case <u>does matter</u> for both parameters and the password 
+				must be a minimal length (or no parameter for no password).</i></p>
+			<p class="subhead">
+			Disable all WiFi
+			</p>
+			<p>
+			At the MicroPython command prompt enter the commands:
+			</p>
+			<div class="python-code">
+				>>> <b>wifi.none()</b>
+			</div>
+			<p>
+				<br />
+			</p>
+			<h3>System Commands</h3>
+			<hr />
+			<p>
+			<b><i>Check Memory</i></b>
+			</p>
+			<div class="python-code">
+				>>> <b>import gc</b><br />
+				>>> <b>gc.mem_free()</b>
+			</div>
+			<br />
+			<p>
+				<b><i>List Available Modules</i></b>
+			</p>
+			<div class="python-code">
+				>>> <b>help('modules')</b><br />
+			</div>
+			<br />
+			<p>
+				<b><i>Turn Off Wifi Debug Messages</i></b>
+			</p>
+			<div class="python-code">
+				>>> <b>import esp</b><br />
+				>>> <b>esp.osdebug(None)</b><br />
+			</div>
+			<br />
+				<p class="footer">
+				<a class="btn btn-a btn-sm smooth" href="replintro.html">Prev</a>&nbsp;-&nbsp;<a class="btn btn-b btn-sm smooth" href="applications.html">Next</a>
+			</p>
+		</div>
+        </body>
+</html>

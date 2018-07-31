@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pocket Cloud - Editor Keys</title>
+        <link href="styles/min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+		<script src="scripts/zepto.min.js"></script>
+    </head>
+    <body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="index.html">Personal Pocket Cloud</a>
+				<a href="getting.html">Getting Started</a>
+				<a href="replintro.html">REPL</a>
+				<a href="usage.html">General Usage</a>
+				<a href="applications.html">Shield Applications</a>
+				<a href="reference.html">Reference</a>
+                <a href="resources.html">Resources</a>
+			</div>
+		</nav>
+		<button class="btn-close btn btn-sm">×</button>
+		<div class="container">
+			<h2>Editing Keys</h2>
+			<p>
+				<table cellpadding="2" cellspacing="2">
+					<thead>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<th style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left"><b>Key(s)</b></p>
+							</th>
+							<th style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left"><b>Function</b></p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Up Down Left Right</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Cursor movement by one line or char</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">PgUp &amp; PgDd</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Page up/down</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Home</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Toggle the position between the start-of-code and
+								the start of line</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">End</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Toggle the position between the end-of-the-code
+								and end-of-line</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Enter</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Enter a line break at the cursor position.
+								Auto-indent is supported</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Backspace</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Delete char left to the cursor (The key must be
+								set to ASCII-Del)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Del</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Delete the char under the cursor. At the end of
+								the line join the next line. If autoindent is enabled, delete
+								also the leading spaces of the joined line. If lines are marked,
+								delete the marked area</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Tab &amp; Backtab</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Insert or remove spaces up to the next tab
+								position. If lines are marked, indent or unindent (opt)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-O</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Open a new file. If the file name is left empty,
+								an empty buffer is opened</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-W</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Toggle to the next file buffer</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-Q or Ctrl-|Close a file buffer or end
+								line-edit</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in"></td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-S</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Save to file with the option to change the file
+								name</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-W</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Switch to the next file buffer</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-F</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Find</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-N</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Repeat last find</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-H</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Find and Replace (opt)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-G</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Go to a line</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-T</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Go to the first line (opt)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-B</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Go to the last line (opt)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-K</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Goto the bracket matching the one under the
+								cursor (opt)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-L or Ctrl-Space</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Mark/Unmark the current line. The mark can then
+								be extended by moving the cursor</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-X or Ctrl-Y</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Cut the marked lines</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-C or Ctrl-D</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Copy the marked lines</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-V</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Insert the copied/cut lines. In the line edit
+								mode paste the item under the cursor of the active window</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-Z</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Undo the last change(s)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-P</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Comment/Uncomment a line or marked area</p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffff" style="background: #ffffff">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-A</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Change settings for tab size, search case
+								sensitivity, auto-indent, comment string and writing tabs (opt)</p>
+							</td>
+						</tr>
+						<tr bgcolor="#f6f8fa" style="background: #f6f8fa">
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Ctrl-E</p>
+							</td>
+							<td style="border: 1px solid #dfe2e5; padding: 0.06in 0.14in">
+								<p align="left">Redraw the screen. On WiPy and PyBord it shows
+								the amount of free memory</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+							</p>
+        </div>
+        <p class="footer">
+            <a class="btn btn-a btn-sm smooth" href="usage.html">Back</a>
+        </p>
+        </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pocket Cloud - Getting Started</title>
+        <link href="styles/min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+		<script src="scripts/zepto.min.js"></script>
+    </head>
+    <body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="index.html">Personal Pocket Cloud</a>
+				<a href="getting.html">Getting Started</a>
+                <a href="replintro.html">REPL</a>
+                <a href="usage.html">General Usage</a>
+				<a href="applications.html">Shield Applications</a>
+				<a href="reference.html">Reference</a>
+                <a href="resources.html">Resources</a>
+			</div>
+		</nav>
+		<button class="btn-close btn btn-sm">×</button>
+		<div class="container">
+			<h2>Introduction to the Read-Evaluate-Print-Loop (REPL)</h2>
+			<p>
+            The MicroPython REPL is a way of interacting with your hardware to execute MicroPython code.  To use it, simply type in 
+            your command at the &gt;&gt;&gt; prompt and press Enter.  Your code will immediately be interpreted and executed.<br /><br />
+            For instance, enter this command... <b>print('Hello World!')</b> and view the generated output...
+            </p>
+			<div class="python-code">
+                >>> <b>print('Hello World!')</b><br />
+                Hello World!<br />
+            </div>
+			<p>
+            You can enter Python expressions...
+            </p>
+            <div class="python-code">
+                >>> <b>13 * 56</b><br />
+                728<br />
+            </div>
+            <p>or</p>
+            <div class="python-code">
+                >>> <b>3 * "Ha "</b><br />
+                'Ha Ha Ha '<br />
+            </div>
+            <p>
+            or import code in an existing module...
+            </p>
+            <div class="python-code">
+                >>> <b>import machine</b><br />
+            </div>
+            <p>The REPL is a great place to experiment and try out new commands and code.  Here are some tips about using it...
+                <ul>
+                    <li>You can use the UP arrow key to go to previously entered commands</li>
+                    <li>The prompt will automatically indent the code when it is needed</li>
+                    <li>You can enter CTRL+E to enter 'paste' mode where you can paste in code directly</li>
+                </ul>
+            </p>
+            <p style="margin-left: 20px; margin-right: 20px; font-style: italic;">
+            At times, you will notice that the device does not seem to respond to keyboard input.  This is usually because it 
+            is currently busy running a script.  To interrupt the script you can try typing Ctrl-C.  This will usually be able to interrupt a runnning application.
+            </p>
+            <p>
+            For more info, here is a great <a href="https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/repl.html#using-the-repl">description</a> of 
+            how to use the REPL command prompt.<br /><br />	
+            </p>
+            <p>
+    			<em>If you would prefer to use a Windows application to manage your device, click <a href="afm.html">here.</a></em>
+			</p>
+			<p class="footer">
+				<a class="btn btn-a btn-sm smooth" href="getting.html">Prev</a>&nbsp;-&nbsp;<a class="btn btn-b btn-sm smooth" href="usage.html">Next</a>
+			</p>
+		</div>
+
+        </body>
+</html>

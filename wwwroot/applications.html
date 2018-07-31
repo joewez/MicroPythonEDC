@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pocket Cloud - Shield Applications</title>
+        <link href="styles/min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+		<script src="scripts/zepto.min.js"></script>
+    </head>
+    <body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="index.html">Personal Pocket Cloud</a>
+				<a href="getting.html">Getting Started</a>
+				<a href="replintro.html">REPL</a>
+                <a href="usage.html">General Usage</a>
+				<a href="applications.html">Shield Applications</a>
+				<a href="reference.html">Reference</a>
+                <a href="resources.html">Resources</a>
+			</div>
+		</nav>
+		<button class="btn-close btn btn-sm">×</button>
+		<div class="container">
+			<h2>Shield Applications</h2>
+			<p>
+            Since the Pocket Cloud is a general-purpose type of device, it can be re-programmed to do many different and various things.  It is
+            designed to work as-is, or with one or more "shield" attachments that plug in to the top of the device.  Below are a list of valid 
+            commands to place in the <b>main.py</b> file broken down by shield that is being used.
+			</p>
+            <p style="font-style: italic;">
+            Please note that the shields can be plugged in two ways.  To verify the correct orientation, just check for any writing on the shield.
+            The writing should be oriented such that the bottom is facing the USB connector.            
+            </p>
+			<h3>No Shields</h3>
+			<p>
+			Web Server for Flash Content 
+			</p>
+			<div class="code">
+				import uhttp<br />
+				uhttp.start()
+			</div> 
+            <br />
+			FTP Server for Devices Files 
+			</p>
+			<div class="code">
+				import uftpd<br />
+			</div> 
+			<p>
+			In order for the Web or File server to work, the device should be part of a network at this point.  
+			Either as a client to an existing Wifi network or when configured as an access point itself.  See the information on controlling wifi connections <a href="usage.html">here</a>.
+			</p>
+            <br />
+			<h3>Red LED Matrix Shield</h3>
+            <img src="images/red_mounted.jpg" />
+			<p>
+			Simple Demo 
+			</p>
+			<div class="code">
+				import matrix_demo
+			</div>            
+			<p>
+			Worm Demo 
+			</p>
+			<div class="code">
+				import matrix_bug
+			</div>            
+			<p>
+			Scrolling Banner 
+			</p>
+			<div class="code">
+                import matrix_scroll<br />
+                matrix_scroll.display('Your message here.')
+			</div>
+			<p>
+			Matrix Reader 
+			</p>
+			<div class="code">
+                import matrix_read<br />
+                matrix_read.read('/misc/poem.txt')
+			</div>
+            <br />
+			<h3>Neopixel Shield</h3>
+            <img src="images/neo_mounted.jpg" />
+			<p>
+			Rainbow (Slow changing)
+			</p>
+			<div class="code">
+                from drivers import neopixelstrip<br />
+                nps = neopixelstrip.NeoPixelStrip(pin_number=4, pixel_count=7)<br />
+                nps.rainbow_animate(cycles=0, delay=1000)
+			</div>            
+			<p>
+			Rainbow (Fast changing)
+			</p>
+			<div class="code">
+                from drivers import neopixelstrip<br />
+                nps = neopixelstrip.NeoPixelStrip(4, 7)<br />
+                nps.rainbow_animate(0, 50)
+			</div>            
+			<p>
+			Solid Color (Pre-Defined)
+			</p>
+			<div class="code">
+				from drivers import neopixelstrip<br />
+				nps = neopixelstrip.NeoPixelStrip(4, 7)<br />
+				nps.blue()<br />
+				nps.red()<br />
+				nps.green()<br />
+				nps.white()<br />
+			</div>			
+			<p>
+			Solid Color (Custom)
+			</p>
+			<div class="code">
+                from drivers import neopixelstrip<br />
+                nps = neopixelstrip.NeoPixelStrip(4, 7)<br />
+				nps.color(&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;)<br />
+			</div>
+			<p>
+			<i>Where each value must be a number between 0 and 255.</i>
+			</p>
+            <br />
+			<p>
+				Individual Pixel Control
+				</p>
+				<div class="code">
+					from drivers import neopixelstrip<br />
+					nps = neopixelstrip.NeoPixelStrip(4, 7)<br />
+					nps.set_pixel(index=0, red=0, green=0, blue=0)<br />
+					nps.set_pixel(1, 128, 128, 128)<br />
+				</div>
+				<br />
+			</p>
+			<p class="footer">
+				<a class="btn btn-a btn-sm smooth" href="usage.html">Prev</a>&nbsp;-&nbsp;<a class="btn btn-b btn-sm smooth" href="reference.html">Next</a>
+			</p>			
+		</div>
+
+        </body>
+</html>
